@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MonochromeCamera" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fRU-kd-2yt">
+                                <rect key="frame" x="21" y="30" width="278" height="200"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="UWW-sH-vIL"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="4Dl-78-B1Z" appends="YES" id="jsA-Bb-CtD"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nN-vk-u3J">
+                                <rect key="frame" x="85" y="250" width="150" height="30"/>
+                                <color key="backgroundColor" red="0.84083564470949823" green="1" blue="0.86904060568718688" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="1it-vt-u7t"/>
+                                    <constraint firstAttribute="height" constant="30" id="Hhb-b6-psC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="monochrome"/>
+                                <connections>
+                                    <action selector="monochromeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q04-ox-cdT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3M-Qh-8KU">
+                                <rect key="frame" x="85" y="367" width="150" height="30"/>
+                                <color key="backgroundColor" red="0.84083564470000005" green="1" blue="0.86904060569999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="RmU-G4-FqS"/>
+                                    <constraint firstAttribute="height" constant="30" id="vaB-Gn-qum"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="save"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cco-e5-DAZ"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="eFT-WG-Xeh">
+                                <rect key="frame" x="19" y="307" width="282" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="278" id="DXC-YY-31M"/>
+                                    <constraint firstAttribute="height" constant="30" id="bSB-gj-k03"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="valueChangeSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="zf2-qV-zZ2"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="fRU-kd-2yt" secondAttribute="trailing" constant="5" id="21j-KP-Ct7"/>
+                            <constraint firstItem="p3M-Qh-8KU" firstAttribute="top" secondItem="eFT-WG-Xeh" secondAttribute="bottom" constant="30" id="FtY-ez-rD0"/>
+                            <constraint firstItem="3nN-vk-u3J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ML7-f4-Vjp"/>
+                            <constraint firstItem="3nN-vk-u3J" firstAttribute="top" secondItem="fRU-kd-2yt" secondAttribute="bottom" constant="20" id="MeT-EW-QlB"/>
+                            <constraint firstItem="fRU-kd-2yt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="QM2-gy-arR"/>
+                            <constraint firstItem="fRU-kd-2yt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="Twu-ge-5N4"/>
+                            <constraint firstItem="fRU-kd-2yt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="klE-mI-zfR"/>
+                            <constraint firstItem="eFT-WG-Xeh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lWb-ia-xnq"/>
+                            <constraint firstItem="eFT-WG-Xeh" firstAttribute="top" secondItem="3nN-vk-u3J" secondAttribute="bottom" constant="27" id="pBz-PM-ye5"/>
+                            <constraint firstItem="p3M-Qh-8KU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yss-UC-ivG"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="myImageView" destination="fRU-kd-2yt" id="f2s-Do-SLB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="4Dl-78-B1Z">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="0Zq-RH-zFe"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="380" y="311"/>
+        </scene>
+    </scenes>
+</document>
